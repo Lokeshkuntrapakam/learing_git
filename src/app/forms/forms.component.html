@@ -1,0 +1,120 @@
+<!-- <div class="p-5">
+    <div class="col-md-8">
+        <div class="names" *ngFor="let data of peopleData; let i=index">
+            <div class="col-md-4" *ngIf="i % 3 === 0">
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        {{data.name}}
+                    </div>
+                    <div class="col-md-4">
+                        {{data.age}}
+                    </div>
+                    <div class="col-md-4">
+                        {{data.phone}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 bg-primary p-3 mb-2 rounded" *ngIf="i % 3 === 1">
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        {{peopleData[i].name}}
+                    </div>
+                    <div class="col-md-4">
+                        {{peopleData[i].age}}
+                    </div>
+                    <div class="col-md-4">
+                        {{peopleData[i].phone}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf="i % 3 === 2">
+                <div class="d-flex">
+                    <div class="col-md-4">
+                        {{peopleData[i].name}}
+                    </div>
+                    <div class="col-md-4">
+                        {{peopleData[i].age}}
+                    </div>
+                    <div class="col-md-4">
+                        {{peopleData[i].phone}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Number</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput formControlname="myControl">
+    </mat-form-field>
+</form> -->
+
+<div class="container p-3">
+    <div class="col-md-12">
+        <div class="row d-flex">
+            <div class="col-md-4">
+                <mat-form-field class="example-form-field col-md-12">
+                    <mat-label>Clearable input</mat-label>
+                    <input matInput type="text" (keyup.enter)="loop_data($event)">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <div class="ngcase" [ngSwitch]="course">
+                    <p *ngSwitchCase="'java'"> Java is selected</p>
+                    <p *ngSwitchCase="'Angulcar'"> Angular is selected</p>
+                    <p *ngSwitchDefault> TypeScript is selected</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="" let *ngFor="let i of matching_data">
+            <div class="row d-flex">
+                <div class="col-md-4 p-3">{{i['name']}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="conatiner p-5">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <mat-form-field class="example-full-width" class="col-md-8">
+                <mat-label>Alphabets</mat-label>
+                <input type="text" matInput [formControl]="myControl" (keyup.enter)="pusmetond();" placeholder="Enter Letters">
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 gap-4 d-flex justify-content-center">
+            <button mat-flat-button class="butn" (click)="pusmetond();">Push</button>
+            <button mat-flat-button class="butn" (click)="popmethod();">Pop</button>
+            <button mat-flat-button class="butn" (click)="getlast();">Pick</button>
+            <button mat-flat-button class="butn" (click)="checkempty();">isEmpty</button>
+            <button mat-flat-button class="butn">isFull</button>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center p-3">
+            <div class="row">
+                <h3>Last Picked Value is " {{pick_value}} "</h3>
+            </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center p-3" *ngIf="isempty">
+            <div class="row">
+                <h3>List is Empty " {{isempty}} "</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-12 d-block">
+        <div class="letters">
+            <ul *ngFor="let data of list_data">
+                <li>{{data}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<!-- <app-sidebar></app-sidebar> -->
